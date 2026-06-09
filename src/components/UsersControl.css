@@ -1,0 +1,482 @@
+/* =========================================================
+   LAYOUT
+========================================================= */
+.users-layout {
+  display: flex;
+  direction: rtl;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.users-content {
+  flex: 1;
+  padding: 25px 30px;
+  margin-right: 220px;
+  overflow-x: hidden;
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+.users-header h2 {
+font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #474747;
+}
+
+.users-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.users-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #fff;
+  border: none;
+  box-shadow: 0 4px 10px #6666661A;
+
+  padding: 12px 18px;
+  border-radius: 24px;
+
+  cursor: pointer;
+  font-family: Tajawal;
+}
+
+.users-btn img {
+  width: 16px;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+/* USERS ACTIONS */
+.users-users-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.users-search-input {
+  position: relative;
+}
+
+.users-search-input img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+}
+
+.users-search-input input {
+  padding: 10px 14px;
+  padding-right: 30px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  width: 200px;
+  height: 28px;
+}
+.users-search-input input::placeholder {
+font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #939393;
+}
+
+
+.users-add-user {
+  background: #ffffff;
+  font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #6F675F;
+}
+.users-add-user:hover{
+  color: var(--primary-color);
+  transition: 0.5s;
+}
+/* TABLE */
+.users-users-table {
+  margin-top: 20px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+
+  background-image:
+    linear-gradient(to left, transparent calc(14.285% - 0.5px), #EAEAEA calc(14.285% - 0.5px), #EAEAEA calc(14.285% + 0.5px), transparent calc(14.285% + 0.5px)),
+    linear-gradient(to left, transparent calc(28.57% - 0.5px), #EAEAEA calc(28.57% - 0.5px), #EAEAEA calc(28.57% + 0.5px), transparent calc(28.57% + 0.5px)),
+    linear-gradient(to left, transparent calc(42.85% - 0.5px), #EAEAEA calc(42.85% - 0.5px), #EAEAEA calc(42.85% + 0.5px), transparent calc(42.85% + 0.5px)),
+    linear-gradient(to left, transparent calc(57.14% - 0.5px), #EAEAEA calc(57.14% - 0.5px), #EAEAEA calc(57.14% + 0.5px), transparent calc(57.14% + 0.5px)),
+    linear-gradient(to left, transparent calc(71.42% - 0.5px), #EAEAEA calc(71.42% - 0.5px), #EAEAEA calc(71.42% + 0.5px), transparent calc(71.42% + 0.5px)),
+    linear-gradient(to left, transparent calc(85.71% - 0.5px), #EAEAEA calc(85.71% - 0.5px), #EAEAEA calc(85.71% + 0.5px), transparent calc(85.71% + 0.5px));
+}
+.users-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: Tajawal;
+  font-weight: 400;
+}
+
+.users-modal {
+    font-family: Tajawal;
+  color: #6F675F;
+
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 500px;
+    font-weight: 400;
+
+}
+
+.users-modal-actions {
+    font-family: Tajawal;
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.delete-btn {
+    font-family: Tajawal;
+    background-color: var(--primary-color);
+    width: 150px;
+
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+    font-weight: 400;
+
+}
+
+.cancel-btn {
+    font-family: Tajawal;
+
+    background: var(--bg-soft);
+color: #474747;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+    font-weight: 400;
+
+}
+/* =========================================================
+   TABLE
+========================================================= */
+
+.users-users-table {
+  margin-top: 20px;
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* نفس الأعمدة للهيدر والصفوف */
+.users-table-head,
+.users-table-row {
+  display: grid;
+  grid-template-columns:
+    2.5fr
+    0.8fr
+    1.2fr
+    2.2fr
+    1.8fr
+    0.8fr;
+}
+/* خلية الـ ID */
+.users-id-cell {
+  overflow: visible !important;
+  text-overflow: unset !important;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+/* الهيدر */
+.users-table-head {
+  background: #F8F8F8;
+  font-family: Tajawal;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* الصفوف */
+.users-table-row {
+  border-top: none;
+}
+
+/* الخلايا */
+.users-table-head > *,
+.users-table-row > * {
+  padding: 16px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-left: 1px solid #EAEAEA;
+
+  min-width: 0;
+}
+
+/* إزالة آخر خط */
+.users-table-head > *:last-child,
+.users-table-row > *:last-child {
+  border-left: none;
+}
+
+/* منع تخريب النص */
+.users-table-row span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* صورة المستخدم */
+.users-user-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+/* الإجراءات */
+.users-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.users-actions img {
+  width: 25px;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 1024px) {
+  .users-content {
+    margin-right: 190px;
+    padding: 20px 15px;
+  }
+
+  .users-search-box input {
+    width: 220px;
+  }
+
+  .users-notification-content h4 {
+    font-size: 17px;
+  }
+
+  .users-notification-content p {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+
+  .users-content {
+    margin-right: 0;
+    padding: 14px 12px;
+  }
+
+  /* TOPBAR */
+  .users-menu-btn {
+    display: block;
+  }
+
+  .users-mobile-logo {
+    display: block;
+  }
+
+  .users-search-box,
+  .users-restaurant-status {
+    display: none;
+  }
+
+  .users-admin-text {
+    display: none;
+  }
+
+  .users-admin-info img {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* HEADER */
+  .users-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .users-header h2 {
+    font-size: 18px;
+  }
+
+  .users-header-actions {
+    gap: 6px;
+  }
+
+  .users-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 16px;
+  }
+
+  .users-btn img {
+    width: 13px;
+  }
+
+  /* HIDE TABS */
+@media (max-width: 768px) {
+
+  .users-table-head {
+    display: none;
+  }
+
+  .users-users-table {
+    border: none;
+    background: transparent;
+  }
+
+  .users-table-row {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .users-table-row span {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* القيم بالنص */
+    align-items: center;
+    padding: 22px 20px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .users-table-row span:last-child {
+    border-bottom: none;
+  }
+
+  /* label عاليمين */
+  .users-table-row span::before {
+    content: attr(data-label);
+    position: absolute;
+    right: 20px;
+    font-weight: 600;
+    color: #8B8B8B;
+  }
+
+  /* الصورة بالنص مع بقاء اللابل يمين */
+  .users-user-img {
+    width: 55px;
+    height: 55px;
+    margin: auto;
+  }
+  /* خلية الصورة فقط */
+.users-image-cell {
+  justify-content: center !important;
+position:relative;
+min-height: 90px;
+}
+
+.users-image-cell .users-user-img {
+  margin: 0;
+  position: absolute;
+  right: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+  /* الإجراءات */
+  .users-actions {
+    justify-content: center !important;
+    gap: 25px;
+    position: relative;
+  }
+
+  .users-actions::before {
+    content: "الإجراءات";
+    position: absolute;
+    right: 20px;
+    font-weight: 600;
+    color: #8B8B8B;
+  }
+}
+}
+@media (max-width: 1200px) {
+  .users-table-head,
+  .users-table-row {
+    font-size: 14px;
+  }
+}/* ================= ADD USER MODAL ================= */
+
+
+
+/* أنيميشن */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

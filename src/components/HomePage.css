@@ -1,0 +1,671 @@
+
+.home-home {
+  font-family: "Tajawal";
+  direction: rtl;
+  background: #f9fafb;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.home-hero {
+  position: relative;
+  height: 320px; /* أقصر */
+}
+
+.home-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-overlay {
+  position: absolute;
+  bottom: 40px; /* صار تحت */
+  right: 50%;
+  transform: translateX(50%);
+  text-align: center;
+  color: white;
+}
+
+
+.home-hero-logo {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.home-overlay h1 {
+  font-size: clamp(16px, 4vw, 22px);
+}
+
+.home-overlay span {
+  color: var(--primary-color);
+}
+
+
+
+
+
+/* TITLE BORDER */
+/* ===== SECTION TITLE (FIGMA EXACT) ===== */
+
+.home-section-title {
+  position: relative;
+  width: 211px;
+  height: 84px;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-Primary, #2F2A25);
+
+}
+
+.home-section-title span {
+  position: relative;
+  font-size: 28px;
+  font-weight: 700;
+  z-index: 2;
+  transform: translateX(15px) translateY(-2px);
+}
+
+.home-title-border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* POPULAR */
+.home-popular {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.home-cards {
+  display: grid;
+  gap: 50px;
+  justify-content: center;
+  grid-template-columns: repeat(3,1fr);
+  margin: auto;
+  width: fit-content;
+
+  
+}
+.home-mobile-only-card{
+  display: none;
+}
+
+.home-card {
+  width: 350px;;
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  overflow: visible;
+  border: 1px solid #66666629
+}
+
+.home-card:hover{
+  border: 1px solid var(--primary-color);
+  transform: translate(-3px,-3px);
+  transition: 0.5s;
+}
+
+.home-card-body button{
+    font-family: Tajawal;
+    width: 151px;
+height: 48;
+border-radius: 24px;
+padding-top: 20px;
+padding-right: 16px;
+padding-bottom: 20px;
+padding-left: 16px;
+gap: 8.04px;
+background-color: white;
+opacity: 1;
+box-shadow: 0px 4px 10px 0px #6666661A;
+  margin-top: 10px;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: medium;
+
+}
+.home-card-body button:hover{
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.home-card-body button span{
+    font-size: 20px;
+}
+/* IMAGE CONTAINER */
+.home-card-image {
+  position: relative;
+  padding: 10px;
+}
+
+/* wrapper جديد */
+.home-image-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden; /* 👈 مهم */
+}
+
+.home-image-wrapper img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  display: block;
+}
+
+/* الإضاءة */
+.home-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(47, 42, 37, 0.6) 20%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(254, 148, 42, 0.5) 100%
+  );
+}
+.home-card-image .home-badge{
+    font-family: Tajawal;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    background: #FFFFFF29;
+    color: white;
+    border: 1px solid var(--background-card, #FFFFFF);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 10px;
+    margin-top: 10px;
+    
+
+
+}
+
+.home-card-image img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0 ;
+  background: linear-gradient(180deg, rgba(47, 42, 37, 0.6) 27.89%, rgba(151, 95, 40, 0) 63.07%, rgba(254, 148, 42, 0.6) 98.24%);
+
+}
+
+/* BADGE */
+
+
+/* DISCOUNT CIRCLE */
+.home-discount {
+  position: absolute;
+
+  top: -15x;
+  left: -13px;
+
+  width: 35px;
+  height: 35px;
+
+  background: var(--primary-color);
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+font-family: Tajawal;
+font-weight: 700;
+font-style: Bold;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+
+  z-index: 5;
+  box-shadow: 0px 4px 6px 0px #6666661A;
+
+
+top: -15px;
+left: -13px;
+opacity: 1;
+gap: 10px;
+padding: 5px;
+
+}
+
+/* BODY */
+.home-card-body {
+  padding: 15px;
+}
+.home-card-body h3{
+    font-family: Tajawal;
+font-weight: 600;
+font-style: Medium;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: var(--text-Primary, #2F2A25);
+
+
+}
+.home-card-body p{
+    font-family: Tajawal;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: var(--text-Secondary, #6F675F);
+
+}
+
+.home-price {
+  display: flex;
+  justify-content: center;
+  width: 165;
+height: 22;
+gap: 20px;
+opacity: 1;
+
+}
+
+.home-old {
+font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+line-height: 120%;
+letter-spacing: 0%;
+text-decoration: line-through;
+color: var(--Accent, #5E6F7A);
+
+
+}
+
+.home-new {
+font-family: Tajawal;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #363842;
+
+}
+
+
+
+/* CATEGORIES */
+.home-categories {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.home-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 65%;
+  margin: auto;
+}
+.home-category-grid h3{
+    font-family: Tajawal;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: black;
+}
+.home-category-grid p{
+    font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.home-category-card h3,
+.home-category-card p {
+  padding-inline: 15px;
+}
+.home-category-card {
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  box-shadow: 0px 0px 15px 0px #F5F5F5;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 320px;
+}
+.home-category-card:hover{
+    box-shadow: 0px 0px 15px 0px #F98629;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.home-category-card img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.home-show-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 25px;
+    font-family: Tajawal;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    height: 55px;
+
+
+}
+.home-show-btn:hover{
+    background-color: rgb(231, 227, 227);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+/* HERO */
+
+
+
+
+
+
+/* TITLE */
+
+/* MOBILE MENU */
+.home-mobile-menu-btn {
+  display: none;
+}
+
+.home-mobile-drawer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  
+
+  .home-home{
+    padding-top: 0;
+  }
+
+
+
+  .home-desktop-nav,
+  .home-desktop-footer{
+    display:none;
+  }
+
+  /* HERO */
+  .home-hero{
+    height:230px;
+  }
+
+  .home-hero img{
+    object-fit:cover;
+    object-position:right center;
+  }
+
+  .home-overlay{
+    bottom:20px;
+  }
+
+  .home-hero-logo{
+    width:55px;
+    margin-bottom:8px;
+  }
+
+  .home-overlay h1{
+    font-size:16px;
+    line-height:1.5;
+  }
+
+  /* MENU BUTTON */
+  .home-mobile-menu-btn{
+    display:flex;
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:1001;
+    width:46px;
+    height:46px;
+    border:none;
+    background:transparent;
+    color:white;
+    font-size:34px;
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .home-mobile-menu-btn.home-active{
+    position:fixed;
+    color:white;
+  }
+  .home-drawer-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  z-index:999;
+}
+
+  /* DRAWER */
+  .home-mobile-drawer{
+    position:fixed;
+    top:70px;
+    left:50%;
+    transform:translateX(-50%) scale(.9);
+    width:82%;
+    background:white;
+    border-radius:28px;
+    padding:50px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:38px;
+    z-index:1000;
+    opacity:0;
+    pointer-events:none;
+    transition:.35s ease;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+  }
+
+  .home-mobile-drawer.home-open{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateX(-50%) scale(1);
+  }
+
+  .home-mobile-drawer a{
+    text-decoration:none;
+    color:#B0B0B0;
+    font-size:clamp(20px,4vw,34px);
+    font-weight:500;
+  }
+
+  .home-mobile-drawer .home-active-link{
+    color:#2F2A25;
+    font-weight:700;
+    text-decoration:underline;
+    text-underline-offset:8px;
+  }
+
+  /* CARDS */
+  .home-cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+  }
+  .home-mobile-only-card{
+  display: block;
+}
+
+  .home-card{
+    width:100%;
+  }
+
+  /* خلي الصورة نفس تنسيق الديسكتوب */
+  .home-image-wrapper img{
+    height:150px;
+    object-fit:cover;
+    object-position:center;
+  }
+
+  /* PRICE فقط بالموبايل */
+/* PRICE MOBILE */
+/* PRICE MOBILE */
+.home-price{
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.home-new-price-row{
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-old-price-row{
+  order: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.home-discount-badge-inline{
+  display: inline-flex;
+  background: var(--primary-color);
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.home-discount-badge-inline{
+  display:inline-flex;
+  background:var(--primary-color);
+  color:white;
+  font-size:11px;
+  padding:2px 6px;
+  border-radius:6px;
+}
+.home-discount{
+  width: 25px;
+  height: 25px;
+}
+
+  /* CATEGORIES */
+  .home-category-grid{
+    width:100%;
+    margin:0;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+  }
+
+  /* BOTTOM BAR */
+  .home-mobile-bottom-bar{
+    display:flex;
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:70px;
+    background:white;
+    box-shadow:0 -4px 20px rgba(0,0,0,0.08);
+    justify-content:space-around;
+    align-items:center;
+    z-index:999;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+  }
+  .home-mobile-bottom-bar p{
+        font-family: Tajawal;
+        color: #4A4A4A;
+        font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: right;
+
+
+
+  }
+  
+
+  .home-mobile-bottom-bar button{
+    border:none;
+    background:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    cursor:pointer;
+  }
+  .home-mobile-bottom-bar  .active p{
+    color:var(--primary-color) ;
+  }
+
+  .home-mobile-bottom-bar button img{
+    width:22px;
+    height:22px;
+  }
+
+  .home-mobile-bottom-bar button p{
+    font-size:12px;
+    margin:0;
+  }
+
+  .home-home{
+    padding-bottom:80px;
+  }
+}
+@media (max-width:1200px){
+  .home-cards {
+  grid-template-columns: repeat(2,1fr);
+
+  
+}
+}

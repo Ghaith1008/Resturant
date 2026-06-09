@@ -1,0 +1,372 @@
+/* =========================================================
+   LAYOUT
+========================================================= */
+.notification-layout {
+  display: flex;
+  direction: rtl;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.notification-content {
+  flex: 1;
+  padding: 25px 30px;
+  margin-right: 220px;
+  overflow-x: hidden;
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+.notification-header h2 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.notification-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notification-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #fff;
+  border: none;
+  box-shadow: 0 4px 10px #6666661A;
+
+  padding: 12px 18px;
+  border-radius: 24px;
+
+  cursor: pointer;
+  font-family: Tajawal;
+}
+
+.notification-btn img {
+  width: 16px;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.notification-notifications-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  text-align: center;
+  align-items: center;
+
+  background: #fff;
+box-shadow: 0px 4px 10px 0px #6666661A;
+
+  border-radius: 20px;
+  padding: 14px 30px;
+
+  margin-bottom: 20px;
+}
+
+.notification-notifications-tabs span {
+
+  cursor: pointer;
+  font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: var(--Color-6, #A39A91);
+
+}
+.notification-notifications-tabs span:hover{
+    color: var(--primary-color);
+}
+
+.notification-notifications-tabs span.notification-active {
+  color: var(--primary-color);
+font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+.notification-notifications-filter {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+}
+
+.notification-notifications-filter select {
+  border: 1px solid #EAEAEA;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: Tajawal;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* =========================================================
+   NOTIFICATION ROW
+========================================================= */
+.notification-notification-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;
+  border: 1px solid #ECECEC;
+  border-radius: 14px;
+
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+/* RIGHT SIDE */
+.notification-notification-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+/* CART */
+.notification-cart-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFF4EA;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-cart-icon-box img {
+  width: 22px;
+  height: 22px;
+}
+
+
+/* TEXT */
+.notification-notification-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.notification-notification-content h4 {
+  font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: right;
+color: var(--text-Primary, #2F2A25);
+
+}
+
+.notification-notification-content p {
+
+  font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: right;
+color: var(--text-Secondary, #6F675F);
+
+}
+
+
+/* LEFT SIDE */
+.notification-notification-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-right: 20px;
+}
+
+.notification-notification-time {
+
+  white-space: nowrap;
+  font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: right;
+color: var(--text-Primary, #2F2A25);
+
+}
+
+.notification-notification-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.notification-notification-actions img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 1024px) {
+  .notification-content {
+    margin-right: 190px;
+    padding: 20px 15px;
+  }
+
+  .notification-search-box input {
+    width: 220px;
+  }
+
+  .notification-notification-content h4 {
+    font-size: 17px;
+  }
+
+  .notification-notification-content p {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+
+  .notification-content {
+    margin-right: 0;
+    padding: 14px 12px;
+  }
+
+  /* TOPBAR */
+  .notification-menu-btn {
+    display: block;
+  }
+
+  .notification-mobile-logo {
+    display: block;
+  }
+
+  .notification-search-box,
+  .notification-restaurant-status {
+    display: none;
+  }
+
+  .notification-admin-text {
+    display: none;
+  }
+
+  .notification-admin-info img {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* HEADER */
+  .notification-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .notification-header h2 {
+    font-size: 18px;
+  }
+
+  .notification-header-actions {
+    gap: 6px;
+  }
+
+  .notification-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 16px;
+  }
+
+  .notification-btn img {
+    width: 13px;
+  }
+
+  /* HIDE TABS */
+  .notification-notifications-tabs {
+    display: none;
+  }
+
+  /* FILTER */
+  .notification-notifications-filter {
+    margin-bottom: 14px;
+  }
+
+  .notification-notifications-filter select {
+    width: 30%;
+    padding: 10px 14px;
+  }
+
+  /* ROW */
+  .notification-notification-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .notification-notification-right {
+    width: 100%;
+  }
+
+  .notification-notification-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .notification-notification-content h4 {
+    font-size: 16px;
+  }
+
+  .notification-notification-content p {
+    font-size: 13px;
+  }
+
+  .notification-notification-left {
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0;
+  }
+
+  .notification-notification-actions {
+    gap: 14px;
+  }
+}

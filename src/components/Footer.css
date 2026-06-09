@@ -1,0 +1,236 @@
+.admin-footer {
+  background: #2F2A25;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 15px 0px;
+  box-sizing: border-box;
+}
+
+.admin-footer-logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.admin-footer p {
+  margin-bottom: 20px;
+  font-family: Tajawal;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.admin-footer .admin-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.admin-footer .admin-socials img {
+  width: 22px;
+  height: 22px;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.admin-footer .admin-socials img:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+.admin-footer-logo {
+  width: 130px;
+  margin-bottom: 20px;
+}
+
+.admin-footer-links {
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 25px;
+  gap: 12px;
+  font-family: Tajawal;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.admin-footer-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 26px;
+  border: 1px solid #FFFFFF4D;
+  border-top: none;
+  border-right: none;
+  border-radius: 0 0 0 14px;
+  transition: all 0.25s ease;
+}
+
+.admin-footer .admin-copyright {
+  border-top: 2px solid #F9FAFB66;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  font-family: Tajawal;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: white;
+}
+
+
+/* =========================
+   Mobile (0px → 480px)
+========================= */
+@media (min-width: 0px) and (max-width: 480px) {
+
+  .admin-footer {
+    padding: 20px 12px;
+  }
+
+  .admin-footer-logo {
+    width: 90px;
+    margin-bottom: 12px;
+  }
+
+  .admin-footer p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .admin-footer .admin-socials {
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .admin-footer .admin-socials img {
+    width: 18px;
+    height: 18px;
+    padding: 7px;
+    transform: scale(0.9);
+  }
+
+  .admin-footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 8px 40px;
+    margin-bottom: 30px;
+  }
+
+  .admin-footer-links a {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .admin-footer .admin-copyright {
+    width: 100%;
+    max-width: 1200px;
+    font-size: 12px;
+    padding-top: 12px;
+    margin-top: 10px;
+  }
+}
+
+
+/* =========================
+   Tablet (481px → 768px)
+========================= */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .admin-footer {
+    padding: 25px 15px;
+  }
+
+  .admin-footer-logo {
+    width: 110px;
+  }
+
+  .admin-footer p {
+    font-size: 16px;
+  }
+
+  .admin-footer .admin-socials img {
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+  }
+
+  .admin-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  .admin-footer-links a {
+    padding: 8px 18px;
+    font-size: 16px;
+  }
+
+  .admin-footer .admin-copyright {
+    width: 90%;
+  }
+}
+
+
+/* =========================
+   Laptop (769px → 1024px)
+========================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .admin-footer {
+    padding: 25px 15px;
+  }
+
+  .admin-footer-links {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+  }
+
+  .admin-footer-links a {
+    padding: 8px 18px;
+    font-size: 16px;
+  }
+
+  .admin-footer .admin-copyright {
+    width: 90%;
+    max-width: 1200px;
+  }
+}
+
+
+/* =========================
+   Desktop (1025px → 1200px)
+========================= */
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+  .admin-footer .admin-copyright {
+    width: 95%;
+  }
+}
+
+
+/* =========================
+   Large Screens (1200px+)
+========================= */
+@media (min-width: 1201px) {
+
+  .admin-footer .admin-copyright {
+    width: 1200px;
+  }
+}

@@ -1,0 +1,66 @@
+/* ===== Toast Container ===== */
+.Toastify__toast {
+  border-radius: 14px !important;
+  padding: 14px !important;
+  font-family: "Arial", sans-serif;
+  background: #fff !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12) !important;
+  direction: rtl;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== خط جانبي (Primary Color مطعم) ===== */
+.Toastify__toast::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff7a00, #ffb703);
+}
+
+/* ===== المحتوى الرئيسي ===== */
+.toast-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== أيقونة الإشعار ===== */
+.toast-icon {
+  font-size: 24px;
+  background: #fff3e6;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== النص ===== */
+.toast-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* العنوان */
+.toast-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #222;
+}
+
+/* الرسالة */
+.toast-message {
+  font-size: 13px;
+  color: #666;
+  margin-top: 3px;
+}
+
+/* ===== progress bar ===== */
+.Toastify__progress-bar {
+  background: linear-gradient(90deg, #ff7a00, #ffb703) !important;
+}

@@ -1,0 +1,552 @@
+/* =========================================
+   --- العناوين ذات القوس البرتقالي ---
+========================================= */
+
+body {
+  background-color: var(--background);
+  color: var(--text-dark);
+  direction: rtl; /* ضمان الاتجاه من اليمين لليسار */
+}
+.category-section-title-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 45px;
+  margin: 50px auto 40px;
+  width: fit-content;
+}
+
+.category-section-title-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: var(--primary-color);
+  border-width: 2px 6px 2px 0px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 5%,
+    black 75%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 5%,
+    black 75%
+  );
+  transform: rotate(-3deg);
+  z-index: 0;
+}
+
+.category-section-title {
+  position: relative;
+  z-index: 1;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+
+
+/* =========================================
+   --- 5. التصنيفات (دائري - واجهة الأصناف) ---
+========================================= */
+/* =========================================
+   --- التصنيفات ---
+========================================= */
+
+.category-categories-container {
+  width: 100%;
+  max-width: 1201px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  overflow-x: hidden;
+}
+
+.category-categories-carousel {
+  width:100%;
+  max-width: 1144.62px;
+  height: 311px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.category-nav-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border:4px solid var(--primary-color);
+  background-color: white;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.category-nav-arrow:hover {
+  background-color: var(--primary);
+  transform: scale(1.2);
+}
+
+.category-category-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 170px;
+  height: 180px;
+  z-index: 1;
+}
+.category-category-item.active {
+  transform: translateY(-12px);
+  transition: 0.3s ease;
+}
+
+.category-category-item {
+  transition: 0.3s ease;
+}
+.category-category-item:hover{
+    transform: translateY(-12px);
+  transition: 0.5s ;
+}
+.category-category-item:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  background: linear-gradient(
+    180deg,
+    #ffe4c4 0%,
+    var(--primary-color) 100%
+  );
+  border-radius: 20px;
+  z-index: 0;
+  box-shadow: 0 8px 16px rgba(248, 158, 67, 0.3);
+}
+.category-category-item img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 4px solid white;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  transition: transform 0.3s;
+}
+
+.category-category-item h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-top: 120px;
+  margin-bottom: 4px;
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.category-category-item span {
+  font-size: 12px;
+  color: var(--text-gray);
+  position: relative;
+  z-index: 2;
+}
+
+.category-category-item.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  background: linear-gradient(
+    180deg,
+    #ffe4c4 0%,
+    var(--primary-color) 100%
+  );
+  border-radius: 20px;
+  z-index: 0;
+  box-shadow: 0 8px 16px rgba(248, 158, 67, 0.3);
+}
+
+.category-category-item.active h3,
+.category-category-item.active span {
+  color: white;
+}
+
+.category-category-item.active img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+/* =========================================
+   --- شبكة المنتجات ---
+========================================= */
+
+.category-products-grid {
+  width: 100%;
+  max-width: 1201px;
+  margin: 40px auto;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, 260px);
+  justify-content: space-between;
+
+  gap: 16px;
+  padding: 10px;
+}
+.category-product-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f3f4f6;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.category-product-card:hover{
+    
+  border: 1px solid var(--primary-color);
+  transform: translate(-3px,-3px);
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+
+.home-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(47, 42, 37, 0.6) 20%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(254, 148, 42, 0.5) 100%
+  );
+}
+
+.category-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.category-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-cat-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.category-product-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.category-product-name {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+}
+
+.category-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 4px;
+}
+
+.category-old-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.category-old-price {
+  font-size: 12px;
+  color: var(--text-gray);
+  text-decoration: line-through;
+}
+
+.category-discount-small {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.category-new-price {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.category-rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.category-stars {
+  color: #f89e43;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.category-reviews {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-gray);
+  font-size: 12px;
+}
+
+.category-product-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.category-product-actions button {
+  flex: 1;
+  padding: 12px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: transparent;
+border: 1px solid var(--border, #66666629);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.category-product-actions button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.3s;
+}
+
+.category-add-to-cart {
+  border-color: #d1d5db !important;
+font-family: Tajawal;
+font-weight: 600;
+font-style: Medium;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: bottom;
+color: var(--text-Primary, #2F2A25);
+
+
+
+}
+
+.category-view-details {
+color: var(--text-Secondary, #6F675F);
+font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: bottom;
+
+}
+/* =========================================
+   --- 8. التجاوب (Media Queries) ---
+========================================= */
+
+/* شاشات التابلت */
+/* =========================================
+   --- التجاوب (Responsive) ---
+========================================= */
+
+/* شاشات التابلت */
+@media (max-width: 1250px) {
+
+  .category-categories-carousel,
+  .category-products-grid {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .category-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* شاشات الموبايل */
+@media (max-width: 1249px) {
+  .category-nav-arrow{
+    display: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .category-section-title {
+    font-size: 24px;
+  }
+
+  .category-categories-carousel {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 15px;
+    box-sizing: border-box;
+  }
+
+  .category-categories-carousel > span[style*="➔"] {
+    display: none !important;
+  }
+
+  .category-category-item {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 170px;
+  }
+
+  .category-category-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .category-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    width: 100%;
+    gap: 16px;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .category-product-card {
+    padding: 8px;
+  }
+
+  .category-image-container {
+    height: 140px;
+  }
+
+  .category-discount-badge-circle {
+    width: 34px;
+    height: 34px;
+    font-size: 11px;
+    top: -8px;
+    left: -8px;
+  }
+
+  .category-cat-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+
+  .category-product-name {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .category-new-price {
+    font-size: 16px;
+  }
+
+  .category-old-price {
+    font-size: 11px;
+  }
+
+  .category-rating-container {
+    margin-bottom: 12px;
+  }
+
+  .category-stars {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .category-reviews {
+    font-size: 10px;
+  }
+
+  .category-product-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .category-product-actions button {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  
+
+}
+@media (max-width:769px) {
+  .desktop-footer{
+    display:none;
+  }
+  
+}
+
+/* شاشات الموبايل الصغيرة جداً */
+@media (max-width: 360px) {
+
+  .category-products-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}

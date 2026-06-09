@@ -1,0 +1,493 @@
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+.prudact-product-page {
+  background: white;
+  padding: 40px 0;
+  min-height: 80vh;
+  direction: rtl;
+}
+
+.prudact-product-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.prudact-product-image img {
+  width: 420px;
+  border-radius: 20px;
+}
+
+.prudact-product-info {
+  flex: 1;
+  text-align: right;
+}
+
+.prudact-product-info h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.prudact-product-info h3 {
+  font-family: Tajawal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: right;
+  color: var(--text-light);
+}
+
+/* top row (مندي + مشاوي) */
+.prudact-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prudact-category {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--bg-soft);
+  color: var(--text-dark);
+}
+.prudact-category,
+.prudact-add-cart{
+  margin-left: 12%;
+} 
+/* السعر + التقييم */
+.prudact-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+
+.prudact-price-row .prudact-price {
+  font-size: 22px;
+  font-weight: bold;
+
+}
+
+.prudact-rating {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: 12%;
+}
+
+.prudact-rating img {
+  width: 16px;
+}
+
+.prudact-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.prudact-reviews {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 16px;
+}
+
+.prudact-reviews img {
+  width: 16px;
+}
+
+.prudact-description,
+.prudact-ingredients {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* الأزرار */
+.prudact-actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.prudact-quantity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.prudact-quantity span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: Tajawal;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+}
+
+/* COUNTER مضبوط */
+.prudact-counter {
+  display: flex;
+  width: 184px;
+  height: 48px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.prudact-counter button {
+  position: relative;
+  width: 50px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+/* لف الإشارة داخل span */
+.prudact-counter button span {
+  display: inline-block;
+  transition: 0.2s;
+}
+
+/* التكبير بس للإشارة */
+.prudact-counter button:hover span {
+  transform: scale(2);
+}
+
+/* الخط القصير */
+.prudact-counter button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px; /* ← خط قصير بالنص */
+  width: 1px;
+  background: #ddd;
+  pointer-events: none;
+}
+
+/* يمين */
+.prudact-counter button:first-child::after {
+  left: 0;
+}
+
+/* يسار */
+.prudact-counter button:last-child::after {
+  right: 0;
+}
+
+.prudact-counter span {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Tajawal;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+/* زر السلة */
+.prudact-add-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 500px;
+  height: 48px;
+
+  background: var(--primary-color);
+  color: white;
+  border: none;
+
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: Tajawal;
+  font-weight: 500;
+  font-size: 20px;
+
+  white-space: nowrap;
+  transition: all 0.3s ease;
+
+  
+}
+
+.prudact-add-cart img {
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.prudact-add-cart:active {
+  transform: scale(0.97);
+}
+
+.prudact-add-cart:hover {
+  background: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.prudact-add-cart:hover img {
+  content: url("../assets/icons/CartYellow.svg");
+}
+
+/* NOTES FULL WIDTH */
+.prudact-notes-full {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 60px;
+}
+
+.prudact-notes-full h3 {
+  font-family: Tajawal;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: var(--text-light);
+}
+
+.prudact-notes-full textarea {
+  width: 93%;
+  height: 150px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  resize: none;
+  margin-top: 10px;
+}
+
+.prudact-notes-full textarea:focus {
+  outline: none;
+  border: 1px solid #ddd;
+}
+
+.prudact-notes-full textarea::placeholder {
+  font-family: Tajawal;
+  color: var(--text-light);
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+}
+/* حل اختفاء النص جنب الصورة */
+.prudact-product-container {
+  display: flex;
+}
+
+.prudact-product-info {
+  flex: 1;
+  min-width: 0; /* أهم سطر 🔥 */
+}
+
+.prudact-product-image {
+  flex-shrink: 0; /* الصورة ما تصغر زيادة */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= TABLET ================= */
+/* ================= MOBILE ================= */
+/* 0px → 480px */
+
+
+/* ================= TABLET ================= */
+/* 481px → 768px */
+@media (min-width: 0px) and (max-width: 768px) {
+
+  .prudact-product-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .prudact-product-image img {
+    width: 280px;
+  }
+
+  .prudact-product-info h1 {
+    font-size: 24px;
+  }
+
+  .prudact-price-row.prudact-price {
+    font-size: 17px;
+  }
+
+  .prudact-actions {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .prudact-add-cart {
+    width: 38%;
+        margin-right: 26%;
+
+  }
+
+  .prudact-notes-full {
+    margin-right: 30px;
+  }
+
+  .prudact-notes-full textarea {
+    width: 93%;
+  }
+}
+
+
+/* ================= SMALL LAPTOP ================= */
+/* 769px → 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .prudact-product-container {
+    gap: 30px;
+  }
+
+  .prudact-product-image img {
+    width: 300px;
+  }
+
+  .prudact-product-info h1 {
+    font-size: 26px;
+  }
+
+  .prudact-price-row .prudact-price {
+    font-size: 18px;
+  }
+
+  .prudact-description,
+  .prudact-ingredients {
+    font-size: 14px;
+  }
+
+  .prudact-actions {
+    gap: 15px;
+  }
+
+  .prudact-add-cart {
+    width: 220px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .prudact-counter {
+    width: 160px;
+    height: 44px;
+  }
+
+  .prudact-notes-full {
+    margin-right: 40px;
+  }
+
+  .prudact-notes-full textarea {
+    width: 93%;
+  }
+}
+
+
+/* ================= DESKTOP ================= */
+/* 1025px → 1200px */
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+  .prudact-product-container {
+    gap: 50px;
+  }
+
+  .prudact-product-image img {
+    width: 350px;
+  }
+
+  .prudact-add-cart {
+    width: 250px;
+  }
+}
+
+
+/* ================= LARGE SCREENS ================= */
+/* 1200px وفوق */
+@media (min-width: 1201px) {
+
+  .prudact-product-container {
+    gap: 60px;
+  }
+
+  .prudact-product-image img {
+    width: 400px;
+  }
+
+  .prudact-add-cart {
+    width: 280px;
+  }
+}

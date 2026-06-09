@@ -1,0 +1,1251 @@
+/* Layout */
+body{
+  overflow-x: hidden;
+}
+.orders-layout {
+  display: flex;
+  direction: rtl;
+  background: white;
+  min-height: 100vh;
+}
+
+/* Content */
+.orders-content {
+  flex: 1;
+  padding: 25px 30px;
+  margin-right: 220px;
+}
+
+
+/* ================= HEADER ================= */
+/* ================= GENERAL STATS ================= */
+
+.orders-stats-section{
+  margin-bottom: 30px;
+}
+
+.orders-stats-title-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.orders-stats-title-row h2{
+  font-family:Tajawal;
+  font-size:32px;
+  font-weight:700;
+}
+
+.orders-stats-filter{
+  border:none;
+  background:transparent;
+  font-family:Tajawal;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.orders-stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.orders-stat-card{
+  border-radius:12px;
+  padding:22px;
+  min-height:120px;
+}
+
+.orders-stat-card img{
+  width:24px;
+  height:24px;
+  margin-bottom:14px;
+}
+
+.orders-stat-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.orders-stat-card h4{
+  margin:0;
+  font-size:16px;
+
+}
+.orders-stat-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.orders-stat-top img{
+  width:42px;
+  height:42px;
+}
+
+.orders-stat-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+
+.orders-stat-growth{
+  font-size:14px;
+  font-weight:600;
+}
+
+.orders-stat-number{
+  font-size:34px;
+  font-weight:700;
+}
+
+.orders-stat-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:20px;
+}
+
+.orders-stat-number{
+  font-size:34px;
+  font-weight:700;
+}
+
+.orders-stat-growth{
+  font-size:14px;
+  font-weight:600;
+}
+
+/* colors */
+
+.orders-stat-card.revenue{
+  background:#EAF7F0;
+}
+.orders-stat-card.revenue h4{
+  font-family: Tajawal;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: Letter Spacing;
+color: #3E7C59;
+
+}
+
+.orders-stat-card.revenue .orders-stat-number,
+.orders-stat-card.revenue .orders-stat-growth{
+  color:#3E7C59;
+}
+
+.orders-stat-card.preparing{
+  background:#FFF8DE;
+}
+.orders-stat-card.preparing h4{
+  font-family: Tajawal;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: Letter Spacing;
+color: #7A5A2E;
+
+}
+
+.orders-stat-card.preparing .orders-stat-number,
+.orders-stat-card.preparing .orders-stat-growth{
+  color:#7A5A2E;
+}
+
+.orders-stat-card.orders{
+  background:#FFF1E6;
+}
+.orders-stat-card.orders h4{
+  color: #8A4B12;
+  font-family: Tajawal;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: Letter Spacing;
+
+
+}
+
+.orders-stat-card.orders .orders-stat-number,
+.orders-stat-card.orders .orders-stat-growth{
+  color:#8A4B12;
+}
+
+.orders-stat-card.stats{
+  background:#EEF0FF;
+}
+.orders-stat-card.stats h4{
+  font-family: Tajawal;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: Letter Spacing;
+
+color:  #4F46E5;
+
+}
+
+.orders-stat-card.stats .orders-stat-number,
+.orders-stat-card.stats .orders-stat-growth{
+  color:#4F46E5;
+}
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.orders-header h2 {
+  font-weight: 600;
+}
+
+.orders-header-actions {
+  display: flex;
+  gap: 10px;
+padding: 20px;
+gap: 8px;
+
+
+
+  
+}
+
+.orders-header-actions .orders-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-family: Tajawal;
+  height: 48px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px 0px #6666661A;
+  border: white;
+  border-radius: 24px;
+
+
+}
+
+.orders-header-actions .btn img {
+  width: 16px;
+}
+
+/* ================= TABLE ================= */
+
+.orders-table-header span {
+font-family: Tajawal;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0px;
+text-align: center;
+color: var(--text-Primary, #2F2A25);
+
+
+
+}
+
+/* ================= INFO ================= */
+.orders-info{
+  margin-right: 40px;
+}
+
+/* ================= PRICE ================= */
+
+.orders-price {
+  font-weight: bold;
+margin-right: 40px;
+}
+
+/* ================= IMAGES ================= */
+
+.orders-order-images {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.orders-stack-item:not(:first-child) {
+  margin-left: -15px;
+}
+
+.orders-stack-item:nth-child(1) { z-index: 3; }
+.orders-stack-item:nth-child(2) { z-index: 2; }
+.orders-stack-item:nth-child(3) { z-index: 4; }
+
+.orders-stack-item.orders-more {
+  background: #f4e7dd;
+  color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #FE942A57;
+border-radius: 6px;
+border-width: 1px;
+font-family: Tajawal;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0px;
+text-align: center;
+
+
+}
+
+/* ================= DETAILS ================= */
+.orders-details{
+  margin-right: 50px;
+}
+.orders-details p {
+  font-weight: 600;
+}
+
+.orders-details .orders-salad {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.orders-details .orders-tag {
+color: var(--primary-color);
+  padding: 2px 6px;
+  margin-right: 5px;
+  font-size: 11px;
+  background: #FFF3E6;
+  width: 16;
+height: 16;
+gap: 6px;
+border-radius: 99px;
+
+
+}
+
+/* ================= CATEGORY ================= */
+.orders-category{
+  margin-right: 40px;
+}
+.orders-category p {
+  font-weight: 600;
+}
+
+.orders-category span {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* ================= ACTIONS ================= */
+
+.orders-actions {
+  display: flex;
+  gap: 8px;
+  margin-right: 30px;
+
+  
+
+}
+
+.orders-action-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+gap: 6.27px;
+opacity: 1;
+border-radius: 5.75px;
+border-width: 0.72px;
+padding: 5.75px;
+background: var(--background-card, white);
+border: 0.72px solid #E5E7EB;
+}
+
+/* ================= CHARTS ================= */
+
+.orders-charts-section{
+  display:grid;
+  grid-template-columns:0.85fr 1.6fr;
+  gap:30px;
+  margin-bottom:30px;
+}
+.orders-chart-filter{
+  border:none;
+  background:transparent;
+  font-family:Tajawal;
+  color:#666;
+  cursor:pointer;
+}
+.orders-pie-chart-card{
+  border-left:1px solid #F1F1F1;
+  padding-left:25px;
+}
+.orders-pie-chart-card h3{
+  text-align:right;
+  margin-bottom:30px;
+  font-size:28px;
+  font-weight:700;
+}
+.orders-line-chart-card,
+.orders-pie-chart-card{
+  background:#fff;
+  border:none;
+  border-radius:0;
+  padding:0;
+  min-height: 370px;
+}
+
+.orders-chart-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+  padding-right: 55px;
+}
+
+.orders-line-chart-card{
+  min-height:320px;
+}
+
+.orders-pie-chart-card{
+  min-height:320px;
+}
+
+/* donut */
+
+.orders-donut-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:25px;
+  height:220px;
+}
+
+.orders-donut{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+
+  background:
+  conic-gradient(
+    #F4C94E 0% 52%,
+    #FF9C2E 52% 75%,
+    #4CAF50 75% 89%,
+    #5B6CE1 89% 100%
+  );
+
+  position:relative;
+}
+
+
+.orders-legend-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:230px;
+}
+.orders-item-name p{
+  margin:0;
+  font-size:15px;
+  font-weight:500;
+}
+
+.orders-legend-percent{
+  color:#555;
+  font-size:15px;
+  font-weight:500;
+}
+
+.orders-legend-name{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#666;
+}
+
+.orders-color-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+}
+
+.orders-donut::after{
+  content:"";
+  position:absolute;
+  inset:28px;
+  background:white;
+  border-radius:50%;
+}
+
+.orders-donut-list{
+  width:190px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.orders-donut-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+}
+
+.orders-item-name{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.orders-item-name p{
+  margin:0;
+}
+
+.orders-item-name span{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  flex-shrink:0;
+}
+
+.orders-donut-row strong{
+  font-size:14px;
+  color:#666;
+}
+/* ================= ADMIN ================= */
+
+.orders-admin-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.orders-admin-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.orders-admin-text p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.orders-admin-text span {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: -2px;
+  display: block;
+}
+
+.orders-customer p {
+  font-weight: 500;
+}
+
+.orders-customer span {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+
+/* ================= IMAGES ================= */
+
+
+/* الحاوية */
+.orders-images-group {
+  position: relative;
+  width: 100px;
+  height: 40px;
+}
+
+/* العناصر */
+.orders-stack-item {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* الصور */
+.orders-stack-item img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #E4E4E4;
+opacity: 1;
+border-radius: 6px;
+border-width: 1px;
+
+}
+
+/* 🔥 الترتيب (مهم جدًا) */
+.orders-stack-item:nth-child(1) {
+  right: 0;
+  z-index: 1;
+}
+
+.orders-stack-item:nth-child(2) {
+  right: 18px;
+  z-index: 2;
+}
+
+.orders-stack-item:nth-child(3) {
+  right: 36px;
+  z-index: 3;
+}
+
+/* 🔥 +2 فوق الكل */
+.orders-stack-item.more {
+  background: #f4e7dd;
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 4;
+}
+
+/* ================= DETAILS ================= */
+
+.orders-details p {
+  font-weight: 600;
+}
+
+.orders-details span {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.orders-tag {
+  background: #f4e7dd;
+  color: var(--primary-color);
+  padding: 2px 6px;
+  border-radius: 8px;
+  margin-right: 5px;
+  font-size: 11px;
+}
+
+/* ================= CATEGORY ================= */
+
+.orders-category p {
+  font-weight: 600;
+}
+
+.orders-category span {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* ================= ACTIONS ================= */
+
+.orders-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.orders-action-btn {
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.orders-action-btn img {
+  width: 25px;
+    padding: 1px;
+
+}
+
+/* ================= DAY LABEL ================= */
+
+.orders-day-label {
+  margin: 15px 5px;
+  color: var(--text-light);
+  font-size: 13px;
+}
+/* ================= MOBILE ================= */
+
+
+
+/* =====================================================
+   MOBILE DESIGN (0px → 576px)
+===================================================== */
+
+
+/* 🔥 mobile row مخفية بالديسكتوب */
+.orders-mobile-food-row .orders-category{
+  display:none;
+}
+/* ================= DELETE MODAL ================= */
+
+.delete-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+.delete-modal {
+  width: 500px;
+  max-width: 90%;
+
+  background: #fff;
+  border-radius: 12px;
+
+  padding: 25px;
+  text-align: center;
+
+  font-family: Tajawal;
+  color: #6F675F;
+
+  animation: fadeIn 0.25s ease;
+}
+
+.delete-modal h3 {
+  margin: 0 0 15px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #474747;
+}
+
+.delete-modal p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.delete-order-id {
+  margin: 20px auto;
+  padding: 12px 20px;
+
+  width: fit-content;
+
+  background: var(--bg-soft);
+  border-radius: 8px;
+
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.delete-cancel-btn,
+.delete-confirm-btn {
+  flex: 1;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px;
+
+  font-family: Tajawal;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-cancel-btn {
+  background: var(--bg-soft);
+  color: #474747;
+}
+
+.delete-cancel-btn:hover {
+  opacity: 0.9;
+}
+
+.delete-confirm-btn {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.delete-confirm-btn:hover {
+  opacity: 0.9;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .delete-modal {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .delete-modal-actions {
+    flex-direction: column;
+  }
+
+  .delete-cancel-btn,
+  .delete-confirm-btn {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:1000px){
+/* ================= LAYOUT ================= */
+.orders-mobile-logo{
+  margin-right: 5%;
+}
+.orders-content{
+  margin-right:0;
+  padding:14px 12px;
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   DASHBOARD STATS + CHARTS MOBILE
+========================================== */
+
+.orders-stats-title-row{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.orders-stats-title-row h2{
+  font-size:24px;
+}
+
+/* ===== الإحصائيات العامة ===== */
+
+.orders-stats-grid{
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.orders-stat-card{
+  min-height:90px;
+  padding:16px;
+}
+
+.orders-stat-top img{
+  width:32px;
+  height:32px;
+}
+
+.orders-stat-card h4{
+  font-size:13px;
+}
+
+.orders-stat-number{
+  font-size:22px;
+}
+
+.orders-stat-growth{
+  font-size:12px;
+}
+
+/* ===== المخططات ===== */
+
+.orders-charts-section{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:24px;
+}
+
+.orders-pie-chart-card,
+.orders-line-chart-card{
+  min-height:auto;
+  width:100%;
+}
+
+.orders-pie-chart-card{
+  border-left:none;
+  padding-left:0;
+}
+
+.orders-pie-chart-card h3,
+.orders-line-chart-card h3{
+  font-size:20px;
+  margin-bottom:16px;
+}
+
+/* ===== عنوان الرسم ===== */
+
+.orders-chart-header{
+  padding-right:0;
+  margin-bottom:12px;
+}
+
+.orders-chart-header h3{
+  font-size:18px;
+}
+
+/* ===== الدونات ===== */
+
+.orders-donut-wrapper{
+  flex-direction:column;
+  height:auto;
+  gap:18px;
+}
+
+.orders-donut-list{
+  width:100%;
+}
+
+.orders-donut-row{
+  width:100%;
+}
+
+/* ===== الرسم الخطي ===== */
+
+.orders-real-chart{
+  height:240px;
+}
+
+.orders-line-chart-card .recharts-responsive-container{
+  min-height:240px;
+}
+
+/* ================= HEADER ================= */
+.orders-header{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.orders-header-actions{
+  width:100%;
+  margin-top:-20px;
+  gap:6px;
+}
+
+.orders-header-actions .orders-btn{
+  height:30px;
+  padding:4px 12px;
+  font-size:12px;
+  border-radius:16px;
+}
+
+/* ================= TABLE ================= */
+.orders-table-header{
+  display:none;
+}
+
+/* ================= ORDER CARD ================= */
+.orders-order-card{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:14px;
+  border-radius:14px;
+}
+
+/* ===== رقم الطلب ===== */
+.orders-order-info{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  width:100%;
+}
+
+.orders-order-info p{
+  font-weight:700;
+  font-size:14px;
+  text-align:right;
+}
+
+.orders-order-info span{
+  width:100%;
+  text-align:center;
+  font-size:12px;
+  color:#777;
+  margin-top:4px;
+}
+
+/* الخط */
+.orders-order-info::after{
+  content:"";
+  width:100%;
+  height:1px;
+  background:#eee;
+  margin-top:10px;
+}
+
+/* ================= CUSTOMER ================= */
+.orders-customer{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:8px;
+  width:100%;
+}
+
+.orders-customer img{
+  width:32px;
+  height:32px;
+}
+
+.orders-customer p{
+  font-weight:700;
+  font-size:15px;
+}
+
+.orders-customer span{
+  display:none;
+}
+
+/* ================= إخفاء عناصر الديسكتوب ================= */
+.orders-order-images,
+.orders-category{
+  display:none;
+}
+
+/* ================= DETAILS + CATEGORY بنفس السطر ================= */
+
+/* نخليهم بنفس السطر بدون تعديل JSX */
+.orders-mobile-food-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  position:relative;
+  padding-bottom:10px;
+}
+
+/* مندي لحم */
+.orders-mobile-food-row .orders-details{
+  order:2;
+  text-align:left;
+  margin-left: 50px;
+}
+
+.orders-mobile-food-row .orders-details p{
+  font-weight:700;
+  font-size:15px;
+}
+
+/* الأطباق */
+.orders-mobile-food-row .orders-category{
+  display:block !important;
+  order:1;
+  text-align:right;
+}
+.orders-mobile-food-row .orders-details span{
+  display:none !important;
+}
+
+.orders-mobile-food-row .orders-category span{
+  display:none !important;
+}
+
+.orders-mobile-food-row .orders-category p{
+  font-weight:600;
+  font-size:13px;
+  color:#444;
+}
+
+/* 🔥 الخط تحتهم */
+.orders-mobile-food-row::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:100%;
+  height:1px;
+  background:#eee;
+}
+
+/* ================= PRICE ================= */
+/* نخليهم آخر سطر */
+/* ================= PRICE + ACTIONS ================= */
+
+
+
+/* السعر (يسار) */
+
+.orders-order-card{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* ================= PRICE WITH ACTIONS (MOBILE ONLY) ================= */
+
+/* نخلي السعر والأزرار بنفس السطر */
+.orders-price{
+  order: 98;
+  margin: 0;
+  font-size: 15px;
+}
+
+.orders-actions{
+  order: 99;
+  margin: 0;
+}
+
+/* نحول الأزرار لسطر */
+.orders-actions{
+  display: flex;
+  gap: 8px;
+}
+
+/* 🔥 أهم جزء */
+/* ================= PRICE + ACTIONS SAME ROW ================= */
+
+/* نخلي الكرت يسمح بسطر أفقي */
+.orders-order-card{
+  display:flex;
+  flex-direction:column;
+}
+
+/* السعر */
+/* ================= PRICE RIGHT + ACTIONS LEFT ================= */
+
+.orders-order-card{
+  position:relative;
+}
+
+/* السعر يبقى طبيعي */
+.orders-price{
+  font-size:15px;
+  font-weight:700;
+  text-align:right;
+  width:100%;
+}
+
+/* الأزرار نثبتها يسار بنفس السطر */
+.orders-actions{
+  position:absolute;
+  left:14px;     /* نفس padding الكرت */
+  bottom:5px;   /* نفس padding */
+  display:flex;
+  gap:8px;
+}
+.orders-action-btn{
+  width:25px;
+  height:25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.orders-action-btn img{
+  width:16px;
+  height:16px;
+}
+
+}
+/* ===== FORCE DESKTOP LAYOUT FOR TABLET ===== */
+/* ================= TABLET (769px → 1024px) ================= */
+@media (min-width: 769px) and (max-width: 1024px){
+
+  /* ================= LAYOUT ================= */
+  .orders-content{
+    margin-right: 200px; /* 🔥 نفس عرض السايدبار */
+    padding: 15px 10px;
+  }
+
+  .orders-sidebar{
+    width: 170px;
+  }
+  
+
+
+  /* ================= HEADER ================= */
+
+  .orders-header h2{
+    font-size: 18px;
+  }
+
+  .orders-header-actions .orders-btn{
+    padding: 6px 10px;
+    font-size: 12px;
+    height: 36px;
+  }
+
+
+
+  /* ================= ORDER CARD ================= */
+
+  .orders-order-card{
+    grid-template-columns:
+      0.8fr 1fr 0.6fr 0.6fr 0.9fr 0.9fr 0.6fr;
+    gap: 4px;
+    padding: 8px;
+    font-size: 11px;
+    align-items: center;
+  }
+
+  /* ================= إزالة الفراغات ================= */
+
+  .orders-order-info,
+  .orders-price,
+  .orders-category,
+  .orders-details,
+  .orders-actions{
+    margin: 0 !important;
+  }
+
+  /* ================= النصوص ================= */
+
+  .orders-order-info p{ font-size: 11px; }
+  .orders-order-info span{ font-size: 9px; }
+
+  .orders-customer p{ font-size: 11px; }
+  .orders-customer span{ font-size: 9px; }
+
+  .orders-details p,
+  .orders-category p{ font-size: 11px; }
+
+  .orders-details span,
+  .orders-category span{ font-size: 9px; }
+
+  /* ================= الصور ================= */
+
+  .orders-stack-item{
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ================= الأزرار ================= */
+
+  .orders-actions{
+    gap: 3px;
+    justify-content: center;
+  }
+
+  .orders-action-btn{
+    width: 22px;
+    height: 22px;
+    padding: 2px;
+  }
+
+  .orders-action-btn img{
+    width: 12px;
+    height: 12px;
+  }
+
+}
